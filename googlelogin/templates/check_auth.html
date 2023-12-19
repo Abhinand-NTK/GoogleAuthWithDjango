@@ -15,8 +15,13 @@
     <div class="container text-dark mt-5">
         <div class="row justify-content-md-center">
           <div class="col-md-5 p-3">
-                <h1>Hai User</h1>
-                <a href="/accounts/login/">login here</a>
+                <h1>My Google Login Project</h1>
+                {% if user %}
+                <p>Welcome, {{ user.email }} !</p>
+                <a href="{% url 'logout'%}">Logout</a>
+                {% else %}
+                <h1>Welcome Friend, please log in</h1>
+                {% endif %}
           </div>
         </div>
       </div>

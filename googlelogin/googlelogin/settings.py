@@ -152,7 +152,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 SITE_ID = 2
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/check-auth/'
+
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {

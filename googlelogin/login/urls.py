@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from . import views
+from .views import check_auth_view  
 urlpatterns = [
-    path("",views.home),
-    path("logout",views.logout_view),
+    path("",views.home,name='home'),
+    path("logout/",views.Logout,name='logout'),
+    path('check-auth/', check_auth_view, name='check_auth'),
 ]
