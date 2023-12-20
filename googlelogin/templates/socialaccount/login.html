@@ -1,22 +1,12 @@
-
-
 {% extends "socialaccount/base_entrance.html" %}
-<!-- {% load i18n %} -->
-<!-- {% load allauth %} -->
+{% load i18n %}
+{% load allauth %}
 
-<!-- {% block head_title %}
-    {% trans "Sign In" %}
-{% endblock head_title %} -->
 
 {% block content %}
     <div style="text-align: center; margin: 20px;">
         {% if process == "connect" %}
-            <!-- <h1 style="color: #333;">
-                {% blocktrans with provider.name as provider %}Connect {{ provider }}{% endblocktrans %}
-            </h1>
-            <p style="font-style: italic; color: #666;">
-                {% blocktrans with provider.name as provider %}You are about to connect a new third-party account from {{ provider }}.{% endblocktrans %}
-            </p> -->
+            
         {% else %}
             <h1 style="color: #333;">
                 {% blocktrans with provider.name as provider %}Sign In Via {{ provider }}{% endblocktrans %}
